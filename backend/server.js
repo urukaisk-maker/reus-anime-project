@@ -9,6 +9,9 @@ const PORT = process.env.PORT || 5000;
 const DATA_FILE = path.join(__dirname, "data", "db.json");
 const MSG_FILE = path.join(__dirname, "data", "messages.json");
 
+const lastPost = new Map();
+const COOLDOWN_MS = 20_000;
+
 app.use(cors());
 app.use(express.json());
 
@@ -36,6 +39,7 @@ app.get("/api/data", (_req, res) => {
     res.status(500).json({ error: "No se pudo leer la base de datos." });
   }
 });
+
 app.get("/api/locations/:id", (req, res) => {
   try {
     const data = readJson(DATA_FILE);
@@ -81,18 +85,35 @@ app.get("/api/messages", (_req, res) => {
 app.post("/api/messages", (req, res) => {
   try {
     const { author, text } = req.body || {};
-    if (!author || !text) {
-      return res.status(400).json({ error: "Faltan 'author' o 'text'." });
+    const cleanAuthor = String(author || "").trim();
+    const cleanText = String(text || "").trim();
+
+    if (!cleanAuthor || !cleanText) {
+      return res.status(400).json({ error: "Falten 'author' o 'text'." });
     }
-    if (author.length > 40 || text.length > 280) {
-      return res.status(400).json({ error: "Máx 40 caracteres de autor y 280 de texto." });
+    if (cleanAuthor.length > 40) {
+      return res.status(400).json({ error: "El nom no pot superar els 40 caràcters." });
     }
+    if (cleanText.length > 250) {
+      return res.status(400).json({ error: "El missatge no pot superar els 250 caràcters." });
+    }
+
+    const ip = req.ip || req.connection.remoteAddress || "unknown";
+    const now = Date.now();
+    const last = lastPost.get(ip);
+    if (last && now - last < COOLDOWN_MS) {
+      const wait = Math.ceil((COOLDOWN_MS - (now - last)) / 1000);
+      return res.status(429).json({ error: `Espera ${wait}s abans d'enviar un altre missatge.` });
+    }
+    lastPost.set(ip, now);
+
     if (!fs.existsSync(MSG_FILE)) writeJson(MSG_FILE, []);
     const messages = readJson(MSG_FILE);
     const msg = {
       id: Date.now().toString(36) + Math.random().toString(36).slice(2, 7),
-      author: String(author).trim(),
-      text: String(text).trim(),
+      author: cleanAuthor,
+      text: cleanText,
+      likes: 0,
       createdAt: new Date().toISOString()
     };
     messages.unshift(msg);
@@ -100,7 +121,24 @@ app.post("/api/messages", (req, res) => {
     res.status(201).json(msg);
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: "Error guardando mensaje." });
+    res.status(500).json({ error: "Error guardant el missatge." });
+  }
+});
+
+app.post("/api/messages/:id/like", (req, res) => {
+  try {
+    if (!fs.existsSync(MSG_FILE)) writeJson(MSG_FILE, []);
+    const messages = readJson(MSG_FILE);
+    const idx = messages.findIndex((m) => m.id === req.params.id);
+    if (idx === -1) {
+      return res.status(404).json({ error: "Missatge no trobat." });
+    }
+    messages[idx].likes = (messages[idx].likes || 0) + 1;
+    writeJson(MSG_FILE, messages);
+    res.json(messages[idx]);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Error guardant el kudo." });
   }
 });
 

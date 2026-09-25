@@ -4,14 +4,18 @@ import Stats from "./components/Stats.jsx";
 import Ticker from "./components/Ticker.jsx";
 import Footer from "./components/Footer.jsx";
 import Tabs from "./components/Tabs.jsx";
-import GachaCard from "./components/GachaCard.jsx";
+import ZonesGrid from "./components/ZonesGrid.jsx";
+import CardModal from "./components/CardModal.jsx";
 import Missions from "./components/Missions.jsx";
 import Inventory from "./components/Inventory.jsx";
 import Categories from "./components/Categories.jsx";
 import People from "./components/People.jsx";
 import MessagesWall from "./components/MessagesWall.jsx";
+import CyberRain from "./components/CyberRain.jsx";
+import MusicToggle from "./components/MusicToggle.jsx";
 import Portfolio from "./pages/Portfolio.jsx";
 import Legal from "./pages/Legal.jsx";
+import { playClick } from "./utils/audio.js";
 
 const TABS = [
   { id: "zones", label: "Zones" },
@@ -21,32 +25,23 @@ const TABS = [
   { id: "wall", label: "Mur" }
 ];
 
-const PAGES = {
-  portfolio: "Portfolio",
-  legal: "Avís legal",
-  privacidad: "Privacitat"
-};
-
 export default function App() {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [tab, setTab] = useState("zones");
   const [page, setPage] = useState(null);
   const [msgCount, setMsgCount] = useState(0);
+  const [selected, setSelected] = useState(null);
 
   useEffect(() => {
-    fetch("/api/data")
-      .then((r) => {
-        if (!r.ok) throw new Error("HTTP " + r.status);
-        return r.json();
-      })
-      .then(setData)
-      .catch((e) => setError(e.message));
+    fetch("/api/data").then((r) => {
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      return r.json();
+    }).then(setData).catch((e) => setError(e.message));
   }, []);
 
   useEffect(() => {
-    fetch("/api/messages")
-      .then((r) => r.json())
+    fetch("/api/messages").then((r) => r.json())
       .then((m) => setMsgCount(Array.isArray(m) ? m.length : 0))
       .catch(() => {});
   }, [tab]);
@@ -56,6 +51,7 @@ export default function App() {
   }, [page]);
 
   function openPage(id) {
+    playClick();
     if (id === "demo") {
       setPage(null);
       setTab("zones");
@@ -64,35 +60,32 @@ export default function App() {
     setPage(id);
   }
 
-  if (error) {
-    return (
-      <div className="app">
-        <div className="state state-error">
-          <span className="state-label">ERROR</span>
-          <p>{error}</p>
-        </div>
-      </div>
-    );
+  function changeTab(id) {
+    playClick();
+    setTab(id);
   }
 
-  if (!data) {
-    return (
-      <div className="app">
-        <div className="state state-loading">
-          <span className="state-label">CARGANDO</span>
-          <div className="loader" />
-        </div>
-      </div>
-    );
+  function openCard(loc) {
+    setSelected(loc);
   }
+
+  function closeCard() {
+    setSelected(null);
+  }
+
+  if (error) return <div className="app"><CyberRain /><div className="state state-error"><span className="state-label">ERROR</span><p>{error}</p></div></div>;
+  if (!data) return <div className="app"><CyberRain /><div className="state state-loading"><span className="state-label">CARGANDO</span><div className="loader" /></div></div>;
 
   return (
     <div className="app">
+      <CyberRain />
+      <MusicToggle />
+
+      {selected && <CardModal loc={selected} onClose={closeCard} />}
+
       {page ? (
         <>
-          <button className="back-btn" onClick={() => setPage(null)}>
-            ← Tornar al panell
-          </button>
+          <button className="back-btn" onClick={() => openPage("demo")}>← Tornar al panell</button>
           {page === "portfolio" && <Portfolio />}
           {page === "legal" && <Legal type="aviso" />}
           {page === "privacidad" && <Legal type="privacidad" />}
@@ -108,16 +101,10 @@ export default function App() {
             people={(data.people || []).length}
             messages={msgCount}
           />
-          <Tabs tabs={TABS} active={tab} onChange={setTab} />
+          <Tabs tabs={TABS} active={tab} onChange={changeTab} />
 
           <main className="content">
-            {tab === "zones" && (
-              <section className="grid">
-                {data.locations.map((loc) => (
-                  <GachaCard key={loc.id} loc={loc} />
-                ))}
-              </section>
-            )}
+            {tab === "zones" && <ZonesGrid locations={data.locations} onOpen={openCard} />}
             {tab === "missions" && <Missions missions={data.missions || []} />}
             {tab === "inventory" && <Inventory items={data.items || []} />}
             {tab === "codex" && (
