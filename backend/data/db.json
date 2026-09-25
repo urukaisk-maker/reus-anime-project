@@ -24,7 +24,7 @@
       "rarity": "R",
       "power": 780,
       "tag": "Zona segura · Vértice central",
-      "image": "https://picsum.photos/seed/reus-prim/800/500",
+      "image": "/img/placa-prim.jpg",
       "reward": "Cafè cibernètic x3",
       "description": "Corazón neurálgico de Reus presidido por la estatua del General Prim. Punto de reaparición de todo desarrollador. Aquí se compran cafés cibernéticos, se planifican misiones y se cierran los tratos antes de salir al Baix Camp."
     },
@@ -37,7 +37,7 @@
       "rarity": "SSR",
       "power": 2600,
       "tag": "Calabozo vertical",
-      "image": "https://picsum.photos/seed/sant-pere-tower/800/500",
+      "image": "/img/campanar-sant-pere.jpg",
       "reward": "Parche d'actualització crític",
       "description": "Torre de alta dificultad. Los programadores deben escalar sus pisos resolviendo acertijos de código y lógica para desbloquear parches que eviten caídas del sistema en toda la comarca."
     },
@@ -50,9 +50,9 @@
       "rarity": "SSR",
       "power": 2200,
       "tag": "Gremi de disseny UI/UX",
-      "image": "https://picsum.photos/seed/casa-navas/800/500",
+      "image": "/img/casa-navas.jpg",
       "reward": "Skin modernista llegendària",
-      "description": "Joya modernista de Lluís Domènech i Montaner en la Plaça del Mercadal. Cuartel general del Gremio de Arquitectos Estéticos. Aquí se fabrican las mejores skins y estilos visuales, protegidos por barreras mágicas de colores vibrantes."
+      "description": "Joya modernista de Lluís Domènech i Montaner en la Plaça del Mercadal. Cuartel general del Gremio de Arquitectos Estéticos. Una de las pocas obras modernistas de Europa que conserva su decoración original íntegra."
     },
     {
       "id": "gaudi-centre",
@@ -63,7 +63,7 @@
       "rarity": "SR",
       "power": 1450,
       "tag": "Laboratori de realitats alternatives",
-      "image": "https://picsum.photos/seed/gaudi-centre/800/500",
+      "image": "/img/gaudi-centre.jpg",
       "reward": "Algoritme geomètric",
       "description": "Centro de investigación tecnológica donde se manipulan las leyes de la física y la geometría. Aquí nacen los algoritmos innovadores que rompen con los límites tradicionales del software."
     },
@@ -76,9 +76,35 @@
       "rarity": "R",
       "power": 950,
       "tag": "Mercat d'objectes",
-      "image": "https://picsum.photos/seed/mercat-reus/800/500",
+      "image": "/img/mercat-central-reus.jpg",
       "reward": "Avellanes del Camp",
       "description": "Mercado con más de un siglo de historia. Producto local, avellanas, vermut de proximidad y arquitectura de hierro y vidrio. Zona de intercambio de recursos entre clanes."
+    },
+    {
+      "id": "santuari-misericordia",
+      "name": "Santuari de Misericòrdia",
+      "region": "Reus",
+      "zoneType": "spawn",
+      "level": 28,
+      "rarity": "SR",
+      "power": 1800,
+      "tag": "Zona sagrada · Patrona de Reus",
+      "image": "https://picsum.photos/seed/misericordia/800/500",
+      "reward": "Benedicció de la Mare de Déu",
+      "description": "Construido en el lugar donde, según la leyenda, en 1592 la Virgen María se apareció a la pastora Isabel Besora, librando a la ciudad de la peste. Gaudí profesaba una devoción especial a esta Virgen."
+    },
+    {
+      "id": "teatre-fortuny",
+      "name": "Teatre Fortuny",
+      "region": "Reus",
+      "zoneType": "lab",
+      "level": 32,
+      "rarity": "SR",
+      "power": 1950,
+      "tag": "Temple de les arts escèniques",
+      "image": "https://picsum.photos/seed/fortuny/800/500",
+      "reward": "Partitura synthwave llegendària",
+      "description": "Inaugurado en 1882 en la Plaça de Prim, es una auténtica joya del patrimonio cultural de Reus. Escenario donde se coordinan programaciones intensas, multidisciplinares y de calidad."
     },
     {
       "id": "anfiteatro-tarraco",
@@ -89,7 +115,7 @@
       "rarity": "SSR",
       "power": 2400,
       "tag": "Patrimoni UNESCO",
-      "image": "https://picsum.photos/seed/tarraco-amfi/800/500",
+      "image": "/img/anfiteatro-tarraco.jpg",
       "reward": "Fragment de pedra romana",
       "description": "Amfiteatro romano del siglo II frente al Mediterráneo. Uno de los conjuntos arqueológicos más importantes de la península. Sus ecos resuenan entre hologramas y ruinas milenarias."
     },
@@ -102,7 +128,7 @@
       "rarity": "SR",
       "power": 1900,
       "tag": "Mirador urbà",
-      "image": "https://picsum.photos/seed/balco-tgn/800/500",
+      "image": "/img/balco-mediterrani.jpg",
       "reward": "Ruta marítima desbloquejada",
       "description": "El puntet més famós. Vista directa sobre el puerto y el mar. Tradición de tocar la barana per tornar a la ciutat. Punto de desbloqueo de rutas marítimas del sector oriental."
     },
@@ -115,7 +141,7 @@
       "rarity": "SSR",
       "power": 2100,
       "tag": "Nucli històric",
-      "image": "https://picsum.photos/seed/catedral-tgn/800/500",
+      "image": "/img/catedral-tarragona.jpg",
       "reward": "Benedicció del codi net",
       "description": "Seu gótica construida sobre una basílica romana. Coronando la Part Alta, vertebra el núcleo medieval. Los clanes locales la usan como punto de reunión neutral."
     }
@@ -154,12 +180,44 @@
       "description": "Convertir tota la història de Reus i Tarragona en contingut navegable sense perdre rigor."
     },
     {
-      "id": "tronada-raid",
+      "id": "tronada-deploy",
       "title": "Tronada de Misericòrdia",
       "difficulty": "★★★★★",
       "progress": 15,
       "reward": "2000 XP · Deploy massiu a producció",
-      "description": "Event de temporada. Desplegament massiu a producció amb explosions visuals, neó a la pantalla i zero downtime."
+      "description": "Event de temporada. Desplegament massiu a producció amb explosions visuals, neó a la pantalla i zero downtime. Inspirat en la tronada que dona inici a les festes."
+    },
+    {
+      "id": "gegants-correfoc",
+      "title": "Correfoc de Diables",
+      "difficulty": "★★★★",
+      "progress": 50,
+      "reward": "800 XP · Insígnia de foc",
+      "description": "Netejar el codi de males pràctiques mentre els Diables de Reus cremen els bugs. El Ball de Diables té referències des de 1771."
+    },
+    {
+      "id": "castells-tripleta",
+      "title": "Tripleta Màgica",
+      "difficulty": "★★★★★",
+      "progress": 25,
+      "reward": "1500 XP · Camisa marró dels Xiquets",
+      "description": "Assolir la Tripleta Màgica amb els Xiquets de Reus. Fundats el 1981, la seva camisa és marró com l'avellana. Un repte històric."
+    },
+    {
+      "id": "vermut-buff",
+      "title": "Ruta del Vermut",
+      "difficulty": "★",
+      "progress": 90,
+      "reward": "300 XP · Poció de maná",
+      "description": "Completar la ruta del vermut pels bars del centre de Reus. Reus és la capital del vermut. En el segle passat s'exportava a mig món."
+    },
+    {
+      "id": "patrimoni-80",
+      "title": "Els 80 edificis",
+      "difficulty": "★★★★",
+      "progress": 35,
+      "reward": "1200 XP · Títol: Cronista Modernista",
+      "description": "Catalogar i documentar els gairebé 80 edificis modernistes de Reus. Casa Navàs, Institut Pere Mata, Casa Rull i Casa Gasull són algunes de les joies."
     }
   ],
   "items": [
@@ -168,7 +226,11 @@
     { "id": "romesco", "name": "Salsa Romesco", "type": "arma", "rarity": "SR", "effect": "Augmenta el dany crític en discussions sobre gastronomia local.", "icon": "🌰" },
     { "id": "gegant", "name": "Gegant de Sant Pere", "type": "invocació", "rarity": "SSR", "effect": "Invoca un aliat que desplega codi per tu durant 3 commits.", "icon": "🎭" },
     { "id": "fibra", "name": "Fibra del Baix Camp", "type": "millora permanent", "rarity": "SSR", "effect": "+50% a la velocitat de resposta de la xarxa local.", "icon": "🛰" },
-    { "id": "mocador", "name": "Mocador de la Misericòrdia", "type": "relíquia", "rarity": "SSR", "effect": "Protegeix contra caigudes de producció en dies festius.", "icon": "🎀" }
+    { "id": "mocador", "name": "Mocador de la Misericòrdia", "type": "relíquia", "rarity": "SSR", "effect": "Protegeix contra caigudes de producció en dies festius.", "icon": "🎀" },
+    { "id": "avellana", "name": "Avellana de Reus", "type": "consumible", "rarity": "SR", "effect": "Restaura energia i aplica buff de concentració. DOP protegida.", "icon": "🌰" },
+    { "id": "mulassa", "name": "Mulassa", "type": "invocació", "rarity": "SSR", "effect": "Invoca la mula gegant de peluix marró que obre pas entre multituds.", "icon": "🐴" },
+    { "id": "drac-reus", "name": "Drac de Reus", "type": "arma", "rarity": "SSR", "effect": "Element de foc. Cremi bugs i males pràctiques amb pirotècnia.", "icon": "🐉" },
+    { "id": "camisa-marro", "name": "Camisa Marró", "type": "armadura", "rarity": "SR", "effect": "Equipament oficial dels Xiquets de Reus. +30% resistència en diades castelleres.", "icon": "👕" }
   ],
   "categories": [
     {
@@ -204,7 +266,17 @@
       "subcategories": [
         { "id": "sant-pere", "name": "Festa Major de Sant Pere", "items": ["Corpus i processons tradicionals", "Seguici popular, gegants i nans", "Revetlla de Sant Pere al centre"] },
         { "id": "carnaval", "name": "Carnaval de Reus", "items": ["Rua de comparses i carrosses", "Enterrament de la sardina", "Concursos de disfresses i música en directe"] },
-        { "id": "castells", "name": "Món casteller", "items": ["Colla Jove Xiquets de Reus", "Diades castelleres al Camp de Tarragona", "Patrimoni Cultural Immaterial de la UNESCO"] }
+        { "id": "misericordia", "name": "Festa de Misericòrdia", "items": ["Tronada i espectacle pirotècnic", "Processó al santuari", "Diada castellera i seguici festiu"] }
+      ]
+    },
+    {
+      "id": "cultura-popular", "name": "Cultura Popular", "icon": "🎭",
+      "description": "Gegants, diables, castellers i bèsties de foc. El patrimoni festiu de Reus és un dels més rics de Catalunya.",
+      "subcategories": [
+        { "id": "gegants", "name": "Gegants i Nanos", "items": ["Documentats des del segle XVIII", "Dotze gegants amb la parella de japonesos", "Els Nanos actuals són hereus dels de 1899"] },
+        { "id": "diables", "name": "Diables i Bèsties de Foc", "items": ["Ball de Diables documentat des de 1771", "El Drac, la Víbria, la Cabra i els Bous de Foc", "Correfoc de Misericòrdia amb XX edicions"] },
+        { "id": "castellers", "name": "Món Casteller", "items": ["Xiquets de Reus fundats el 1981", "Camisa marró com l'avellana", "Creu de Sant Jordi el 2006"] },
+        { "id": "seguici", "name": "Seguici Festiu", "items": ["La Mulassa, mula gegant de peluix marró", "L'Àliga, element destacat del seguici", "El Seguici de Sant Pere i Misericòrdia"] }
       ]
     }
   ],
@@ -216,6 +288,11 @@
     { "id": "jujol", "name": "Josep Maria Jujol", "era": "1879 · 1949", "role": "Arquitecte", "initials": "JJ", "bio": "Col·laborador de Gaudí i autor d'obres plenes de color i fantasia. Va treballar a Reus, Tarragona i Sant Joan Despí." },
     { "id": "amoros", "name": "Xavier Amorós", "era": "1923 · 2012", "role": "Poeta i escriptor", "initials": "XA", "bio": "Cronista de la memòria popular de Reus. La seva obra retrata la ciutat i la seva gent amb tendresa i humor." },
     { "id": "xiquets", "name": "Colla Jove Xiquets de Reus", "era": "1981 · actualitat", "role": "Colla castellera", "initials": "XR", "bio": "Una de les colles castelleres referents del Camp de Tarragona. Porten el nom de Reus arreu de Catalunya." },
-    { "id": "gent", "name": "La gent del carrer", "era": "sempre", "role": "Ànima de la ciutat", "initials": "GR", "bio": "Vermuters, botiguers, castellers i veïns que fan de Reus i Tarragona ciutats vives. Ells són el veritable patrimoni." }
+    { "id": "gent", "name": "La gent del carrer", "era": "sempre", "role": "Ànima de la ciutat", "initials": "GR", "bio": "Vermuters, botiguers, castellers i veïns que fan de Reus i Tarragona ciutats vives. Ells són el veritable patrimoni." },
+    { "id": "joan-rebull", "name": "Joan Rebull", "era": "1899 · 1981", "role": "Escultor", "initials": "JR", "bio": "Escultor reusenc de renom internacional. La seva obra, de formes sòlides i serenes, és present a Reus i arreu de Catalunya." },
+    { "id": "joaquim-bartrina", "name": "Joaquim Maria Bartrina", "era": "1850 · 1880", "role": "Escriptor", "initials": "JB", "bio": "Un dels personatges més interessants i polifacètics del segle XIX català. Nascut a Reus, la seva obra poètica va marcar una època." },
+    { "id": "bernat-calbo", "name": "Bernat Calvó", "era": "1180 · 1243", "role": "Religiós i bisbe", "initials": "BC", "bio": "Fill il·lustre de Reus. Bisbe de Vic i conseller reial, va ser una figura clau de l'Església catalana medieval." },
+    { "id": "isabel-besora", "name": "Isabel Besora", "era": "segle XVI", "role": "Pastora · Llegenda", "initials": "IB", "bio": "Pastora a qui, segons la llegenda de 1592, la Mare de Déu de Misericòrdia es va aparèixer, salvant la ciutat de la pesta." },
+    { "id": "xiquets-fundadors", "name": "Fundadors dels Xiquets", "era": "18 nov 1981", "role": "Castellers", "initials": "XF", "bio": "Grup de joves que van fundar els Xiquets de Reus coincidint amb el 125è aniversari del ferrocarril a la ciutat." }
   ]
 }
