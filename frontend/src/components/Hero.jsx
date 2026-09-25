@@ -1,4 +1,25 @@
-export default function Hero({ profile }) {
+const LINK_ACTIONS = {
+  GitHub: "external",
+  Portfolio: "portfolio",
+  Demo: "demo",
+  "Aviso Legal": "legal",
+  Privacidad: "privacidad"
+};
+
+export default function Hero({ profile, onNavigate }) {
+  function handleClick(link) {
+    const action = LINK_ACTIONS[link.label];
+    if (action === "external") {
+      window.open(link.url, "_blank", "noreferrer");
+      return;
+    }
+    if (action === "demo") {
+      onNavigate("demo");
+      return;
+    }
+    if (action) onNavigate(action);
+  }
+
   return (
     <section className="hero">
       <div className="hero-bg" aria-hidden="true">
@@ -18,13 +39,18 @@ export default function Hero({ profile }) {
         <p className="hero-bio">{profile.bio}</p>
         <div className="hero-meta">
           <span className="meta-pill">📍 {profile.location}</span>
-          <span className="meta-pill">⚡ Disponible para proyectos</span>
+          <span className="meta-pill">⚡ Disponible per a projectes</span>
         </div>
         <nav className="hero-links">
           {profile.links.map((l) => (
-            <a key={l.label} href={l.url} target="_blank" rel="noreferrer" className="cta">
+            <button
+              key={l.label}
+              type="button"
+              className="cta"
+              onClick={() => handleClick(l)}
+            >
               {l.label}
-            </a>
+            </button>
           ))}
         </nav>
       </div>

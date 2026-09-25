@@ -89,7 +89,7 @@
       "rarity": "SR",
       "power": 1800,
       "tag": "Zona sagrada · Patrona de Reus",
-      "image": "https://picsum.photos/seed/misericordia/800/500",
+      "image": "/img/santuari-misericordia.jpg",
       "reward": "Benedicció de la Mare de Déu",
       "description": "Construido en el lugar donde, según la leyenda, en 1592 la Virgen María se apareció a la pastora Isabel Besora, librando a la ciudad de la peste. Gaudí profesaba una devoción especial a esta Virgen."
     },
@@ -102,7 +102,7 @@
       "rarity": "SR",
       "power": 1950,
       "tag": "Temple de les arts escèniques",
-      "image": "https://picsum.photos/seed/fortuny/800/500",
+      "image": "/img/teatre-fortuny.jpg",
       "reward": "Partitura synthwave llegendària",
       "description": "Inaugurado en 1882 en la Plaça de Prim, es una auténtica joya del patrimonio cultural de Reus. Escenario donde se coordinan programaciones intensas, multidisciplinares y de calidad."
     },

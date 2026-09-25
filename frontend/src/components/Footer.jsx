@@ -1,5 +1,27 @@
-export default function Footer({ profile }) {
+const LINK_ACTIONS = {
+  GitHub: "external",
+  Portfolio: "portfolio",
+  Demo: "demo",
+  "Aviso Legal": "legal",
+  Privacidad: "privacidad"
+};
+
+export default function Footer({ profile, onNavigate }) {
   const year = new Date().getFullYear();
+
+  function handle(link) {
+    const action = LINK_ACTIONS[link.label];
+    if (action === "external") {
+      window.open(link.url, "_blank", "noreferrer");
+      return;
+    }
+    if (action === "demo") {
+      onNavigate && onNavigate("demo");
+      return;
+    }
+    onNavigate && onNavigate(action);
+  }
+
   return (
     <footer className="footer">
       <div className="footer-top">
@@ -17,19 +39,23 @@ export default function Footer({ profile }) {
           <ul>
             {profile.links.map((l) => (
               <li key={l.label}>
-                <a href={l.url} target="_blank" rel="noreferrer">{l.label}</a>
+                <button type="button" className="link-btn" onClick={() => handle(l)}>
+                  {l.label}
+                </button>
               </li>
             ))}
           </ul>
         </div>
         <div className="footer-block">
           <h4>LEGAL</h4>
-          <p className="dim">Proyecto personal sin ánimo de lucro.</p>
-          <p className="dim">Las marcas citadas pertenecen a sus respectivos titulares.</p>
+          <p className="dim">Projecte personal sense ànim de lucre.</p>
+          <p className="dim">
+            Les marques i noms citats pertanyen als seus respectius titulars.
+          </p>
         </div>
       </div>
       <div className="footer-bottom">
-        <span>© {year} {profile.name} · Todos los derechos reservados</span>
+        <span>© {year} {profile.name} · Tots els drets reservats</span>
         <span className="footer-sig">// CÓDIGO FORJADO EN EL MEDITERRÁNEO</span>
       </div>
     </footer>
