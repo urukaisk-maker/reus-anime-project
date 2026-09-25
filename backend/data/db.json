@@ -68,5 +68,205 @@
       "power": 2100,
       "description": "Núcleo gótico con aura protectora. Los clanes locales la usan como punto de reunión neutral."
     }
+  ],
+  "categories": [
+    {
+      "id": "historia",
+      "name": "Història",
+      "icon": "📜",
+      "description": "Dos mil anys de memòria col·lectiva, des de Tarraco fins a la ciutat modernista.",
+      "subcategories": [
+        {
+          "id": "epoca-romana",
+          "name": "Època Romana",
+          "items": [
+            "Tarraco, capital de la Hispània Citerior",
+            "Amfiteatre i circ romans",
+            "Muralles i aqüeducte de les Ferreres"
+          ]
+        },
+        {
+          "id": "edat-mitjana",
+          "name": "Edat Mitjana",
+          "items": [
+            "Reus sota domini del Camp de Tarragona",
+            "Camí de Sant Jaume pel Baix Camp",
+            "Gremis i confraries artesanes"
+          ]
+        },
+        {
+          "id": "segle-xix",
+          "name": "Segle XIX",
+          "items": [
+            "Reus, ciutat bressol del modernisme",
+            "Puixança del comerç d'aiguardent",
+            "El general Prim i la política catalana"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "modernisme",
+      "name": "Modernisme",
+      "icon": "🏛️",
+      "description": "Reus és el segon bressol modernista de Catalunya després de Barcelona.",
+      "subcategories": [
+        {
+          "id": "gaudi",
+          "name": "Antoni Gaudí",
+          "items": [
+            "Nascut a Reus el 1852",
+            "Casa Navàs com a col·laboració local",
+            "La Sagrada Família com a obra universal"
+          ]
+        },
+        {
+          "id": "domenech-montaner",
+          "name": "Lluís Domènech i Montaner",
+          "items": [
+            "Casa Navàs (1901-1908)",
+            "Institut Pere Mata",
+            "Palau de la Música Catalana"
+          ]
+        },
+        {
+          "id": "cases-singulars",
+          "name": "Cases singulars",
+          "items": [
+            "Casa Rull",
+            "Casa Gasull",
+            "Casa Pinyol"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gastronomia",
+      "name": "Gastronomia",
+      "icon": "🍷",
+      "description": "El vermut, els calçots i els mercats defineixen el paladar de la ciutat.",
+      "subcategories": [
+        {
+          "id": "vermut",
+          "name": "El Vermut de Reus",
+          "items": [
+            "Vermut negre i vermut blanc",
+            "Ruta del Vermut pels bars del centre",
+            "Fabricació artesanal des del segle XIX"
+          ]
+        },
+        {
+          "id": "calcot",
+          "name": "Calçots",
+          "items": [
+            "Calçotada tradicional al Baix Camp",
+            "Valls i Reus com a epicentre",
+            "Salsa romesco com a patrimoni"
+          ]
+        },
+        {
+          "id": "postres",
+          "name": "Postres típics",
+          "items": [
+            "Menjar blanc",
+            "Coca de Sant Pere",
+            "Avellanes i fruits secs del Camp"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "festes",
+      "name": "Festes i Tradicions",
+      "icon": "🎉",
+      "description": "El calendari festiu de Reus és un dels més rics del Camp de Tarragona.",
+      "subcategories": [
+        {
+          "id": "sant-pere",
+          "name": "Festa Major de Sant Pere",
+          "items": [
+            "Corpus i processons",
+            "Seguici popular i gegants",
+            "Revetlla de Sant Pere"
+          ]
+        },
+        {
+          "id": "carnaval",
+          "name": "Carnaval de Reus",
+          "items": [
+            "Rua de comparses",
+            "Enterrament de la sardina",
+            "Concursos de disfresses"
+          ]
+        },
+        {
+          "id": "misericordia",
+          "name": "Mare de Déu de Misericòrdia",
+          "items": [
+            "Processó al santuari",
+            "Cobles i balls tradicionals",
+            "Diada castellera"
+          ]
+        }
+      ]
+    }
+  ],
+  "people": [
+    {
+      "id": "antoni-gaudi",
+      "name": "Antoni Gaudí",
+      "era": "1852 · 1926",
+      "role": "Arquitecte",
+      "bio": "Geni universal del modernisme. Nascut a Reus, va transformar Barcelona amb la Sagrada Família, la Pedrera i el Park Güell."
+    },
+    {
+      "id": "joan-prim",
+      "name": "Joan Prim",
+      "era": "1814 · 1870",
+      "role": "Militar i polític",
+      "bio": "General i president del Consell de Ministres. Figura clau de la política espanyola del segle XIX, nascut a Reus."
+    },
+    {
+      "id": "salvador-espriu",
+      "name": "Salvador Espriu",
+      "era": "1913 · 1985",
+      "role": "Poeta i dramaturg",
+      "bio": "Un dels grans poetes catalans del segle XX. Autor de 'La pell de brau' i 'Cementiri de Sinera'."
+    },
+    {
+      "id": "marià-fortuny",
+      "name": "Marià Fortuny",
+      "era": "1838 · 1874",
+      "role": "Pintor",
+      "bio": "Pintor reusenc de fama internacional, admirat per la seva tècnica i color. Mort prematurament a Roma."
+    },
+    {
+      "id": "josep-maria-jujol",
+      "name": "Josep Maria Jujol",
+      "era": "1879 · 1949",
+      "role": "Arquitecte",
+      "bio": "Col·laborador de Gaudí i autor d'obres plenes de color i fantasia. També va treballar a Reus i Tarragona."
+    },
+    {
+      "id": "xavier-amoros",
+      "name": "Xavier Amorós",
+      "era": "1923 · 2012",
+      "role": "Poeta i escriptor",
+      "bio": "Cronista de la memòria popular de Reus. La seva obra retrata la ciutat i la seva gent amb tendresa i humor."
+    },
+    {
+      "id": "xiquets-de-reus",
+      "name": "Colla Jove Xiquets de Reus",
+      "era": "1981 · actualitat",
+      "role": "Colla castellera",
+      "bio": "Una de les colles castelleres referents del Camp de Tarragona. Porten el nom de la ciutat arreu de Catalunya."
+    },
+    {
+      "id": "gent-del-carrer",
+      "name": "La gent del carrer",
+      "era": "sempre",
+      "role": "Ànima de la ciutat",
+      "bio": "Vermuters, botiguers, castellers i veïns que fan de Reus una ciutat viva. Ells són el veritable patrimoni."
+    }
   ]
 }
