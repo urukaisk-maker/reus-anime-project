@@ -19,269 +19,203 @@
       "id": "placa-prim",
       "name": "Plaça de Prim",
       "region": "Reus",
+      "zoneType": "spawn",
       "level": 12,
       "rarity": "R",
       "power": 780,
-      "tag": "Districte comercial",
-      "description": "Epicentre comercial de Reus. Envoltat d'arquitectura modernista, acull els vermuts més reconeguts de la ciutat i marca el ritme diari del Baix Camp."
+      "tag": "Zona segura · Vértice central",
+      "image": "https://picsum.photos/seed/reus-prim/800/500",
+      "reward": "Cafè cibernètic x3",
+      "description": "Corazón neurálgico de Reus presidido por la estatua del General Prim. Punto de reaparición de todo desarrollador. Aquí se compran cafés cibernéticos, se planifican misiones y se cierran los tratos antes de salir al Baix Camp."
+    },
+    {
+      "id": "campanar-sant-pere",
+      "name": "Campanar de Sant Pere",
+      "region": "Reus",
+      "zoneType": "dungeon",
+      "level": 45,
+      "rarity": "SSR",
+      "power": 2600,
+      "tag": "Calabozo vertical",
+      "image": "https://picsum.photos/seed/sant-pere-tower/800/500",
+      "reward": "Parche d'actualització crític",
+      "description": "Torre de alta dificultad. Los programadores deben escalar sus pisos resolviendo acertijos de código y lógica para desbloquear parches que eviten caídas del sistema en toda la comarca."
+    },
+    {
+      "id": "casa-navas",
+      "name": "Casa Navàs",
+      "region": "Reus",
+      "zoneType": "guild",
+      "level": 38,
+      "rarity": "SSR",
+      "power": 2200,
+      "tag": "Gremi de disseny UI/UX",
+      "image": "https://picsum.photos/seed/casa-navas/800/500",
+      "reward": "Skin modernista llegendària",
+      "description": "Joya modernista de Lluís Domènech i Montaner en la Plaça del Mercadal. Cuartel general del Gremio de Arquitectos Estéticos. Aquí se fabrican las mejores skins y estilos visuales, protegidos por barreras mágicas de colores vibrantes."
     },
     {
       "id": "gaudi-centre",
       "name": "Gaudí Centre",
       "region": "Reus",
+      "zoneType": "lab",
       "level": 25,
       "rarity": "SR",
       "power": 1450,
-      "tag": "Llegat universal",
-      "description": "Espai dedicat a Antoni Gaudí, fill il·lustre de Reus. Recorre la seva obra des dels primers encàrrecs locals fins als projectes que van redefinir l'arquitectura moderna."
+      "tag": "Laboratori de realitats alternatives",
+      "image": "https://picsum.photos/seed/gaudi-centre/800/500",
+      "reward": "Algoritme geomètric",
+      "description": "Centro de investigación tecnológica donde se manipulan las leyes de la física y la geometría. Aquí nacen los algoritmos innovadores que rompen con los límites tradicionales del software."
     },
     {
       "id": "mercat-central-reus",
       "name": "Mercat Central de Reus",
       "region": "Reus",
+      "zoneType": "shop",
       "level": 18,
       "rarity": "R",
       "power": 950,
-      "tag": "Patrimoni gastronòmic",
-      "description": "Mercat amb més d'un segle d'història. Producte local, avellanes del Camp, vermut de proximitat i una arquitectura que combina ferro i vidre."
+      "tag": "Mercat d'objectes",
+      "image": "https://picsum.photos/seed/mercat-reus/800/500",
+      "reward": "Avellanes del Camp",
+      "description": "Mercado con más de un siglo de historia. Producto local, avellanas, vermut de proximidad y arquitectura de hierro y vidrio. Zona de intercambio de recursos entre clanes."
     },
     {
       "id": "anfiteatro-tarraco",
       "name": "Amfiteatre de Tarraco",
       "region": "Tarragona",
+      "zoneType": "dungeon",
       "level": 40,
       "rarity": "SSR",
       "power": 2400,
       "tag": "Patrimoni UNESCO",
-      "description": "Amfiteatre romà del segle II, situat davant del mar Mediterrani. Un dels conjunts arqueològics més importants de la península, declarat Patrimoni de la Humanitat."
+      "image": "https://picsum.photos/seed/tarraco-amfi/800/500",
+      "reward": "Fragment de pedra romana",
+      "description": "Amfiteatro romano del siglo II frente al Mediterráneo. Uno de los conjuntos arqueológicos más importantes de la península. Sus ecos resuenan entre hologramas y ruinas milenarias."
     },
     {
       "id": "balco-mediterrani",
       "name": "Balcó del Mediterrani",
       "region": "Tarragona",
+      "zoneType": "vista",
       "level": 30,
       "rarity": "SR",
       "power": 1900,
       "tag": "Mirador urbà",
-      "description": "El puntet més emblemàtic de Tarragona. Vista directa sobre el port i el mar, amb la tradició de tocar la barana per tornar a la ciutat."
+      "image": "https://picsum.photos/seed/balco-tgn/800/500",
+      "reward": "Ruta marítima desbloquejada",
+      "description": "El puntet més famós. Vista directa sobre el puerto y el mar. Tradición de tocar la barana per tornar a la ciutat. Punto de desbloqueo de rutas marítimas del sector oriental."
     },
     {
       "id": "catedral-tarragona",
       "name": "Catedral de Tarragona",
       "region": "Tarragona",
+      "zoneType": "guild",
       "level": 35,
       "rarity": "SSR",
       "power": 2100,
       "tag": "Nucli històric",
-      "description": "Seu gòtica construïda sobre una basílica romana. Coronant la Part Alta, vertebra el nucli medieval de la ciutat i el seu entorn patrimonial."
+      "image": "https://picsum.photos/seed/catedral-tgn/800/500",
+      "reward": "Benedicció del codi net",
+      "description": "Seu gótica construida sobre una basílica romana. Coronando la Part Alta, vertebra el núcleo medieval. Los clanes locales la usan como punto de reunión neutral."
     }
+  ],
+  "missions": [
+    {
+      "id": "docker-deploy",
+      "title": "Deploy containeritzat",
+      "difficulty": "★★★",
+      "progress": 75,
+      "reward": "500 XP · Insígnia Docker",
+      "description": "Aconseguir que els contenidors de backend i frontend arrenquin en un sol 'docker compose up' sense fum."
+    },
+    {
+      "id": "font-warnings",
+      "title": "Caça de warnings",
+      "difficulty": "★★",
+      "progress": 40,
+      "reward": "200 XP · Silenci al DevTools",
+      "description": "Eliminar tots els avisos de tipografia i consola per assolir un entorn net i professional."
+    },
+    {
+      "id": "muro-vivo",
+      "title": "Mur viu",
+      "difficulty": "★★",
+      "progress": 60,
+      "reward": "300 XP · Community badge",
+      "description": "Aconseguir que el mur de missatges tingui activitat real i persistència al servidor."
+    },
+    {
+      "id": "patrimoni-digital",
+      "title": "Patrimoni digital",
+      "difficulty": "★★★★",
+      "progress": 30,
+      "reward": "1000 XP · Títol: Cronista del Baix Camp",
+      "description": "Convertir tota la història de Reus i Tarragona en contingut navegable sense perdre rigor."
+    },
+    {
+      "id": "tronada-raid",
+      "title": "Tronada de Misericòrdia",
+      "difficulty": "★★★★★",
+      "progress": 15,
+      "reward": "2000 XP · Deploy massiu a producció",
+      "description": "Event de temporada. Desplegament massiu a producció amb explosions visuals, neó a la pantalla i zero downtime."
+    }
+  ],
+  "items": [
+    { "id": "vermut", "name": "Vermut de Reus", "type": "consumible", "rarity": "SR", "effect": "Restaura 100% del manà i aplica buff de coding speed durant 4h.", "icon": "🍷" },
+    { "id": "cafe-cyber", "name": "Cafè Cibernètic", "type": "consumible", "rarity": "R", "effect": "Elimina la fatiga. Permet compilar dues vegades seguides sense error.", "icon": "☕" },
+    { "id": "romesco", "name": "Salsa Romesco", "type": "arma", "rarity": "SR", "effect": "Augmenta el dany crític en discussions sobre gastronomia local.", "icon": "🌰" },
+    { "id": "gegant", "name": "Gegant de Sant Pere", "type": "invocació", "rarity": "SSR", "effect": "Invoca un aliat que desplega codi per tu durant 3 commits.", "icon": "🎭" },
+    { "id": "fibra", "name": "Fibra del Baix Camp", "type": "millora permanent", "rarity": "SSR", "effect": "+50% a la velocitat de resposta de la xarxa local.", "icon": "🛰" },
+    { "id": "mocador", "name": "Mocador de la Misericòrdia", "type": "relíquia", "rarity": "SSR", "effect": "Protegeix contra caigudes de producció en dies festius.", "icon": "🎀" }
   ],
   "categories": [
     {
-      "id": "historia",
-      "name": "Història",
-      "icon": "📜",
+      "id": "historia", "name": "Història", "icon": "📜",
       "description": "Dos mil anys de memòria col·lectiva, des de la Tarraco romana fins a la ciutat modernista del segle XIX.",
       "subcategories": [
-        {
-          "id": "epoca-romana",
-          "name": "Època Romana",
-          "items": [
-            "Tarraco, capital de la Hispània Citerior",
-            "Amfiteatre, circ i teatre romans",
-            "Muralles, aqüeducte de les Ferreres i arc de Berà"
-          ]
-        },
-        {
-          "id": "edat-mitjana",
-          "name": "Edat Mitjana",
-          "items": [
-            "Formació dels nuclis de Reus i Tarragona",
-            "Camí de Sant Jaume pel Baix Camp",
-            "Gremis, confraries i economia artesana"
-          ]
-        },
-        {
-          "id": "segle-xix",
-          "name": "Segle XIX",
-          "items": [
-            "Reus com a bressol del modernisme a Catalunya",
-            "Puixança del comerç d'aiguardent i avellanes",
-            "El general Prim i la seva empremta política"
-          ]
-        }
+        { "id": "epoca-romana", "name": "Època Romana", "items": ["Tarraco, capital de la Hispània Citerior", "Amfiteatre, circ i teatre romans", "Muralles, aqüeducte de les Ferreres i arc de Berà"] },
+        { "id": "edat-mitjana", "name": "Edat Mitjana", "items": ["Formació dels nuclis de Reus i Tarragona", "Camí de Sant Jaume pel Baix Camp", "Gremis, confraries i economia artesana"] },
+        { "id": "segle-xix", "name": "Segle XIX", "items": ["Reus com a bressol del modernisme a Catalunya", "Puixança del comerç d'aiguardent i avellanes", "El general Prim i la seva empremta política"] }
       ]
     },
     {
-      "id": "modernisme",
-      "name": "Modernisme",
-      "icon": "🏛",
+      "id": "modernisme", "name": "Modernisme", "icon": "🏛",
       "description": "Reus és el segon bressol modernista de Catalunya. Una ciutat on l'arquitectura de finals del XIX encara es respira carrer a carrer.",
       "subcategories": [
-        {
-          "id": "gaudi",
-          "name": "Antoni Gaudí",
-          "items": [
-            "Nascut a Reus el 1852",
-            "Formació a l'Escola d'Arquitectura de Barcelona",
-            "La Sagrada Família com a obra universal"
-          ]
-        },
-        {
-          "id": "domenech-montaner",
-          "name": "Lluís Domènech i Montaner",
-          "items": [
-            "Casa Navàs (1901-1908), icona reusenca",
-            "Institut Pere Mata, obra mestra modernista",
-            "Palau de la Música Catalana a Barcelona"
-          ]
-        },
-        {
-          "id": "cases-singulars",
-          "name": "Ruta de cases modernistes",
-          "items": [
-            "Casa Rull (Reus)",
-            "Casa Gasull (Reus)",
-            "Casa Pinyol (Reus)"
-          ]
-        }
+        { "id": "gaudi", "name": "Antoni Gaudí", "items": ["Nascut a Reus el 1852", "Formació a l'Escola d'Arquitectura de Barcelona", "La Sagrada Família com a obra universal"] },
+        { "id": "domenech", "name": "Lluís Domènech i Montaner", "items": ["Casa Navàs (1901-1908), icona reusenca", "Institut Pere Mata, obra mestra modernista", "Palau de la Música Catalana a Barcelona"] },
+        { "id": "cases", "name": "Ruta de cases modernistes", "items": ["Casa Rull (Reus)", "Casa Gasull (Reus)", "Casa Pinyol (Reus)"] }
       ]
     },
     {
-      "id": "gastronomia",
-      "name": "Gastronomia",
-      "icon": "🍷",
-      "description": "El vermut, els calçots i els mercats defineixen el paladar del Camp de Tarragona. Cuina de proximitat amb arrels profundes.",
+      "id": "gastronomia", "name": "Gastronomia", "icon": "🍷",
+      "description": "El vermut, els calçots i els mercats defineixen el paladar del Camp de Tarragona.",
       "subcategories": [
-        {
-          "id": "vermut",
-          "name": "El Vermut de Reus",
-          "items": [
-            "Vermut negre i vermut blanc de producció local",
-            "Ruta del Vermut pel centre de Reus",
-            "Fabricació artesanal amb tradició des del segle XIX"
-          ]
-        },
-        {
-          "id": "calcot",
-          "name": "Calçots i calçotades",
-          "items": [
-            "Calçotada tradicional al Baix Camp",
-            "Valls i Reus com a epicentre de la temporada",
-            "Salsa romesco com a patrimoni gastronòmic"
-          ]
-        },
-        {
-          "id": "postres",
-          "name": "Postres i dolços",
-          "items": [
-            "Menjar blanc",
-            "Coca de Sant Pere",
-            "Avellanes i fruits secs del Camp"
-          ]
-        }
+        { "id": "vermut", "name": "El Vermut de Reus", "items": ["Vermut negre i vermut blanc de producció local", "Ruta del Vermut pel centre de Reus", "Fabricació artesanal amb tradició des del segle XIX"] },
+        { "id": "calcot", "name": "Calçots i calçotades", "items": ["Calçotada tradicional al Baix Camp", "Valls i Reus com a epicentre de la temporada", "Salsa romesco com a patrimoni gastronòmic"] },
+        { "id": "postres", "name": "Postres i dolços", "items": ["Menjar blanc", "Coca de Sant Pere", "Avellanes i fruits secs del Camp"] }
       ]
     },
     {
-      "id": "festes",
-      "name": "Festes i Tradicions",
-      "icon": "🎉",
-      "description": "El calendari festiu de Reus i Tarragona és un dels més rics de Catalunya: castells, gegants, processons i foc.",
+      "id": "festes", "name": "Festes i Tradicions", "icon": "🎉",
+      "description": "El calendari festiu de Reus i Tarragona és un dels més rics de Catalunya.",
       "subcategories": [
-        {
-          "id": "sant-pere",
-          "name": "Festa Major de Sant Pere",
-          "items": [
-            "Corpus i processons tradicionals",
-            "Seguici popular, gegants i nans",
-            "Revetlla de Sant Pere al centre"
-          ]
-        },
-        {
-          "id": "carnaval",
-          "name": "Carnaval de Reus",
-          "items": [
-            "Rua de comparses i carrosses",
-            "Enterrament de la sardina",
-            "Concursos de disfresses i música en directe"
-          ]
-        },
-        {
-          "id": "castells",
-          "name": "Món casteller",
-          "items": [
-            "Colla Jove Xiquets de Reus",
-            "Diades castelleres al Camp de Tarragona",
-            "Patrimoni Cultural Immaterial de la UNESCO"
-          ]
-        }
+        { "id": "sant-pere", "name": "Festa Major de Sant Pere", "items": ["Corpus i processons tradicionals", "Seguici popular, gegants i nans", "Revetlla de Sant Pere al centre"] },
+        { "id": "carnaval", "name": "Carnaval de Reus", "items": ["Rua de comparses i carrosses", "Enterrament de la sardina", "Concursos de disfresses i música en directe"] },
+        { "id": "castells", "name": "Món casteller", "items": ["Colla Jove Xiquets de Reus", "Diades castelleres al Camp de Tarragona", "Patrimoni Cultural Immaterial de la UNESCO"] }
       ]
     }
   ],
   "people": [
-    {
-      "id": "antoni-gaudi",
-      "name": "Antoni Gaudí",
-      "era": "1852 · 1926",
-      "role": "Arquitecte",
-      "initials": "AG",
-      "bio": "Geni universal del modernisme. Nascut a Reus, va transformar Barcelona amb la Sagrada Família, la Pedrera i el Park Güell. La seva obra és Patrimoni de la Humanitat."
-    },
-    {
-      "id": "joan-prim",
-      "name": "Joan Prim",
-      "era": "1814 · 1870",
-      "role": "Militar i polític",
-      "initials": "JP",
-      "bio": "General i president del Consell de Ministres d'Espanya. Figura clau de la política del segle XIX, nascut a Reus. El seu llegat marca encara la ciutat."
-    },
-    {
-      "id": "marià-fortuny",
-      "name": "Marià Fortuny",
-      "era": "1838 · 1874",
-      "role": "Pintor",
-      "initials": "MF",
-      "bio": "Pintor reusenc de fama internacional. Admirat per la seva tècnica i el seu color, va morir prematurament a Roma deixant una obra curta però influent."
-    },
-    {
-      "id": "salvador-espriu",
-      "name": "Salvador Espriu",
-      "era": "1913 · 1985",
-      "role": "Poeta i dramaturg",
-      "initials": "SE",
-      "bio": "Un dels grans poetes catalans del segle XX. Autor de 'La pell de brau' i 'Cementiri de Sinera', referent de la literatura catalana contemporània."
-    },
-    {
-      "id": "josep-maria-jujol",
-      "name": "Josep Maria Jujol",
-      "era": "1879 · 1949",
-      "role": "Arquitecte",
-      "initials": "JJ",
-      "bio": "Col·laborador de Gaudí i autor d'obres plenes de color i fantasia. Va treballar a Reus, Tarragona i Sant Joan Despí, deixant una empremta única."
-    },
-    {
-      "id": "xavier-amoros",
-      "name": "Xavier Amorós",
-      "era": "1923 · 2012",
-      "role": "Poeta i escriptor",
-      "initials": "XA",
-      "bio": "Cronista de la memòria popular de Reus. La seva obra retrata la ciutat i la seva gent amb tendresa, humor i una mirada profundament arrelada."
-    },
-    {
-      "id": "xiquets-de-reus",
-      "name": "Colla Jove Xiquets de Reus",
-      "era": "1981 · actualitat",
-      "role": "Colla castellera",
-      "initials": "XR",
-      "bio": "Una de les colles castelleres referents del Camp de Tarragona. Porten el nom de Reus arreu de Catalunya i són part activa del patrimoni casteller."
-    },
-    {
-      "id": "gent-del-carrer",
-      "name": "La gent del carrer",
-      "era": "sempre",
-      "role": "Ànima de la ciutat",
-      "initials": "GR",
-      "bio": "Vermuters, botiguers, castellers i veïns que fan de Reus i Tarragona ciutats vives. Ells són el veritable patrimoni del territori."
-    }
+    { "id": "gaudi", "name": "Antoni Gaudí", "era": "1852 · 1926", "role": "Arquitecte", "initials": "AG", "bio": "Geni universal del modernisme. Nascut a Reus, va transformar Barcelona amb la Sagrada Família, la Pedrera i el Park Güell." },
+    { "id": "prim", "name": "Joan Prim", "era": "1814 · 1870", "role": "Militar i polític", "initials": "JP", "bio": "General i president del Consell de Ministres d'Espanya. Figura clau de la política del segle XIX, nascut a Reus." },
+    { "id": "fortuny", "name": "Marià Fortuny", "era": "1838 · 1874", "role": "Pintor", "initials": "MF", "bio": "Pintor reusenc de fama internacional. Admirat per la seva tècnica i el seu color, va morir prematurament a Roma." },
+    { "id": "espriu", "name": "Salvador Espriu", "era": "1913 · 1985", "role": "Poeta i dramaturg", "initials": "SE", "bio": "Un dels grans poetes catalans del segle XX. Autor de 'La pell de brau' i 'Cementiri de Sinera'." },
+    { "id": "jujol", "name": "Josep Maria Jujol", "era": "1879 · 1949", "role": "Arquitecte", "initials": "JJ", "bio": "Col·laborador de Gaudí i autor d'obres plenes de color i fantasia. Va treballar a Reus, Tarragona i Sant Joan Despí." },
+    { "id": "amoros", "name": "Xavier Amorós", "era": "1923 · 2012", "role": "Poeta i escriptor", "initials": "XA", "bio": "Cronista de la memòria popular de Reus. La seva obra retrata la ciutat i la seva gent amb tendresa i humor." },
+    { "id": "xiquets", "name": "Colla Jove Xiquets de Reus", "era": "1981 · actualitat", "role": "Colla castellera", "initials": "XR", "bio": "Una de les colles castelleres referents del Camp de Tarragona. Porten el nom de Reus arreu de Catalunya." },
+    { "id": "gent", "name": "La gent del carrer", "era": "sempre", "role": "Ànima de la ciutat", "initials": "GR", "bio": "Vermuters, botiguers, castellers i veïns que fan de Reus i Tarragona ciutats vives. Ells són el veritable patrimoni." }
   ]
 }
