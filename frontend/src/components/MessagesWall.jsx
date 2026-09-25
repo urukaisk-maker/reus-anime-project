@@ -12,14 +12,13 @@ export default function MessagesWall() {
       const r = await fetch("/api/messages");
       const data = await r.json();
       setMessages(Array.isArray(data) ? data : []);
-    } catch (e) {
+    } catch {
       setError("No s'han pogut carregar els missatges.");
     }
   }
 
-  useEffect(() => {
-    load();
-  }, []);
+  useEffect(() => { load(); }, []);
+
   async function submit(e) {
     e.preventDefault();
     if (!author.trim() || !text.trim()) return;
@@ -47,44 +46,60 @@ export default function MessagesWall() {
   return (
     <section className="wall">
       <form className="wall-form" onSubmit={submit}>
-        <h3>Deixa el teu missatge</h3>
-        <div className="wall-row">
+        <header className="wall-form-head">
+          <h3>Deixa el teu missatge</h3>
+          <p>Els missatges es guarden al servidor. Màxim 280 caràcters.</p>
+        </header>
+
+        <label className="field">
+          <span>Nom</span>
           <input
             type="text"
-            placeholder="El teu nom (màx 40)"
+            placeholder="Com et dius?"
             value={author}
             maxLength={40}
             onChange={(e) => setAuthor(e.target.value)}
           />
           <span className="counter">{author.length}/40</span>
-        </div>
-        <div className="wall-row">
+        </label>
+
+        <label className="field">
+          <span>Missatge</span>
           <textarea
-            placeholder="Escriu el teu missatge (màx 280)"
+            placeholder="Escriu el que vulguis..."
             value={text}
             maxLength={280}
             rows={4}
             onChange={(e) => setText(e.target.value)}
           />
           <span className="counter">{text.length}/280</span>
-        </div>
+        </label>
+
         {error && <p className="wall-error">{error}</p>}
+
         <button type="submit" disabled={sending || !author.trim() || !text.trim()}>
           {sending ? "ENVIANT..." : "ENVIAR AL SECTOR"}
         </button>
       </form>
 
       <div className="wall-list">
-        <h3>Missatges ({messages.length})</h3>
-        {messages.length === 0 && <p className="empty">Sigues el primer a escriure!</p>}
+        <header className="wall-list-head">
+          <h3>Mur públic</h3>
+          <span className="wall-count">{messages.length} missatges</span>
+        </header>
+
+        {messages.length === 0 && (
+          <p className="empty">Sigues el primer a deixar un missatge.</p>
+        )}
+
         {messages.map((m) => (
           <article key={m.id} className="msg">
-            <div className="msg-head">
+            <header className="msg-head">
               <span className="msg-author">{m.author}</span>
               <span className="msg-date">
                 {new Date(m.createdAt).toLocaleString("ca-ES")}
               </span>
-            </div>
+            </header>
             <p className="msg-text">{m.text}</p>
           </article>
         ))}
