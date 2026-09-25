@@ -1,0 +1,72 @@
+{
+  "profile": {
+    "name": "Manuel Casimiro Carrasco",
+    "alias": "urukaisk-maker",
+    "title": "Full Stack Developer · Reus & Tarragona",
+    "bio": "Forjador de código desde la Ciudad del Vermut y la Tarraco ancestral. Construyo interfaces con estética otaku, backends sólidos y deploys que no explotan (casi siempre).",
+    "location": "Reus · Tarragona · Catalunya",
+    "links": [
+      { "label": "GitHub", "url": "https://github.com/urukaisk-maker" },
+      { "label": "Portfolio", "url": "#" },
+      { "label": "Demo", "url": "#" },
+      { "label": "Aviso Legal", "url": "#" },
+      { "label": "Privacidad", "url": "#" }
+    ]
+  },
+  "locations": [
+    {
+      "id": "placa-prim",
+      "name": "Plaça de Prim",
+      "region": "Reus",
+      "level": 12,
+      "rarity": "R",
+      "power": 780,
+      "description": "Punto neurálgico del distrito modernista. Aquí se reúnen los gremios de comerciantes y los runners del vermut."
+    },
+    {
+      "id": "gaudi-centre",
+      "name": "Gaudí Centre",
+      "region": "Reus",
+      "level": 25,
+      "rarity": "SR",
+      "power": 1450,
+      "description": "Santuario del arquitecto ancestral. Sus curvas esconden patrones geométricos imposibles de replicar."
+    },
+    {
+      "id": "mercat-central-reus",
+      "name": "Mercat Central de Reus",
+      "region": "Reus",
+      "level": 18,
+      "rarity": "R",
+      "power": 950,
+      "description": "Mercado donde se intercambian recursos raros. Famoso por sus vermuts con propiedades restauradoras."
+    },
+    {
+      "id": "anfiteatro-tarraco",
+      "name": "Anfiteatro Romano de Tarraco",
+      "region": "Tarragona",
+      "level": 40,
+      "rarity": "SSR",
+      "power": 2400,
+      "description": "Zona legendaria donde el eco de los gladiadores resuena entre hologramas y ruinas milenarias."
+    },
+    {
+      "id": "balco-mediterrani",
+      "name": "Balcó del Mediterrani",
+      "region": "Tarragona",
+      "level": 30,
+      "rarity": "SR",
+      "power": 1900,
+      "description": "El puntet més famós. Desde aquí se divisan las rutas marítimas del sector oriental."
+    },
+    {
+      "id": "catedral-tarragona",
+      "name": "Catedral de Tarragona",
+      "region": "Tarragona",
+      "level": 35,
+      "rarity": "SSR",
+      "power": 2100,
+      "description": "Núcleo gótico con aura protectora. Los clanes locales la usan como punto de reunión neutral."
+    }
+  ]
+}

@@ -1,0 +1,260 @@
+:root {
+  --bg-0: #05010f;
+  --bg-1: #0d0221;
+  --neon-pink: #ff2ec4;
+  --neon-purple: #9d4edd;
+  --neon-cyan: #00f0ff;
+  --text: #e6e1ff;
+  --text-dim: #9d8ec7;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: radial-gradient(circle at 20% 10%, #1a0033 0%, var(--bg-1) 40%, var(--bg-0) 100%);
+  color: var(--text);
+  font-family: "Rajdhani", system-ui, sans-serif;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 4rem 1rem;
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 0.15em;
+  color: var(--neon-cyan);
+  text-shadow: 0 0 12px var(--neon-cyan);
+}
+
+.header {
+  position: relative;
+  padding: 2rem;
+  border: 1px solid rgba(157, 78, 221, 0.5);
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(157, 78, 221, 0.15), rgba(0, 240, 255, 0.05));
+  box-shadow:
+    0 0 20px rgba(157, 78, 221, 0.4),
+    inset 0 0 30px rgba(255, 46, 196, 0.08);
+  clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 24px 100%, 0 calc(100% - 24px));
+}
+
+.kicker {
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  color: var(--neon-cyan);
+  margin: 0 0 0.75rem;
+  text-shadow: 0 0 8px var(--neon-cyan);
+}
+
+.name {
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  margin: 0;
+  color: #fff;
+  text-shadow:
+    0 0 10px var(--neon-pink),
+    0 0 24px var(--neon-pink);
+  letter-spacing: 0.05em;
+}
+
+.alias {
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  color: var(--neon-cyan);
+  margin: 0.25rem 0 0.5rem;
+}
+
+.title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--neon-purple);
+  margin: 0.5rem 0 1.25rem;
+  letter-spacing: 0.15em;
+}
+
+.bio {
+  max-width: 60ch;
+  color: var(--text-dim);
+  line-height: 1.6;
+  margin: 0 0 0.75rem;
+}
+
+.location {
+  color: var(--neon-cyan);
+  font-size: 0.9rem;
+  margin: 0 0 1.5rem;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.links a {
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+  color: var(--neon-cyan);
+  padding: 0.55rem 1rem;
+  border: 1px solid var(--neon-cyan);
+  border-radius: 6px;
+  background: rgba(0, 240, 255, 0.05);
+  transition: all 0.2s ease;
+}
+
+.links a:hover {
+  color: #05010f;
+  background: var(--neon-cyan);
+  box-shadow: 0 0 18px var(--neon-cyan);
+}
+
+.grid {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  position: relative;
+  padding: 1.25rem;
+  border-radius: 12px;
+  background: linear-gradient(160deg, rgba(13, 2, 33, 0.95), rgba(26, 0, 51, 0.95));
+  border: 1px solid rgba(157, 78, 221, 0.6);
+  box-shadow: 0 0 14px rgba(157, 78, 221, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 0.75rem;
+}
+
+.region { color: var(--text-dim); }
+.rarity { font-weight: 700; }
+
+.card-name {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.05rem;
+  margin: 0 0 0.6rem;
+  color: #fff;
+}
+
+.card-desc {
+  font-size: 0.92rem;
+  color: var(--text-dim);
+  line-height: 1.5;
+  margin: 0 0 1rem;
+  min-height: 4.5em;
+}
+
+.card-stats {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  color: var(--neon-cyan);
+}
+
+.rarity-r    { border-color: rgba(0, 240, 255, 0.6); box-shadow: 0 0 12px rgba(0, 240, 255, 0.35); }
+.rarity-r    .rarity { color: var(--neon-cyan); text-shadow: 0 0 8px var(--neon-cyan); }
+
+.rarity-sr   { border-color: rgba(157, 78, 221, 0.75); box-shadow: 0 0 16px rgba(157, 78, 221, 0.55); }
+.rarity-sr   .rarity { color: var(--neon-purple); text-shadow: 0 0 8px var(--neon-purple); }
+
+.rarity-ssr  { border-color: rgba(255, 46, 196, 0.85); box-shadow: 0 0 22px rgba(255, 46, 196, 0.6); }
+.rarity-ssr  .rarity { color: var(--neon-pink); text-shadow: 0 0 10px var(--neon-pink); }
+
+.footer {
+  margin-top: 3.5rem;
+  padding: 2rem;
+  border: 1px solid rgba(0, 240, 255, 0.4);
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(13, 2, 33, 0.7), rgba(5, 1, 15, 0.9));
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.15);
+  clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-block h4 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.25em;
+  color: var(--neon-cyan);
+  margin: 0 0 0.5rem;
+  text-shadow: 0 0 8px var(--neon-cyan);
+}
+
+.footer-block p,
+.footer-block li {
+  color: var(--text);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0.15rem 0;
+}
+
+.footer-block .dim { color: var(--text-dim); font-size: 0.82rem; }
+
+.footer-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-block a {
+  color: var(--neon-purple);
+  text-decoration: none;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.footer-block a:hover {
+  color: var(--neon-pink);
+  text-shadow: 0 0 8px var(--neon-pink);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(157, 78, 221, 0.3);
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  color: var(--text-dim);
+}
+
+.footer-sig {
+  color: var(--neon-pink);
+  text-shadow: 0 0 8px var(--neon-pink);
+}
