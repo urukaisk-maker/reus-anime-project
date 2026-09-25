@@ -1,0 +1,26 @@
+
+
+services:
+  backend:
+    build: ./backend
+    container_name: reus-anime-backend
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
+    networks:
+      - reus-net
+
+  frontend:
+    build: ./frontend
+    container_name: reus-anime-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+    networks:
+      - reus-net
+
+networks:
+  reus-net:
+    driver: bridge
