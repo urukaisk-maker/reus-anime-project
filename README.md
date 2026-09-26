@@ -1,126 +1,66 @@
-# 🌸 Reus Anime Cyberpunk
+# 🌸 Reus & Tarragona · Anime Cyberpunk Edition 🎮
 
-**Panel interactivo que convierte Reus y Tarragona en un universo RPG navegable con estética anime/cyberpunk.**
+> "No hago software para las masas: hago software para las personas."
+> — Manuel Casimiro Carrasco, Reus
 
-Proyecto personal de [Manuel Casimiro Carrasco (@urukaisk-maker)](https://github.com/urukaisk-maker), desarrollador full stack afincado en Reus con base operativa en Tarragona.
-
----
-
-## 🎯 Qué es
-
-Un panel web que reinterpreta los rincones emblemáticos de Reus y Tarragona como zonas de un videojuego de rol. Cada lugar real se convierte en una carta gacha con nivel, poder, rareza y recompensa.
-
-**Zonas incluidas:**
-
-- Plaça de Prim (spawn)
-- Campanar de Sant Pere (dungeon)
-- Casa Navàs (guild)
-- Gaudí Centre (lab)
-- Mercat Central de Reus (shop)
-- Santuari de Misericòrdia (spawn sagrat)
-- Teatre Fortuny (lab)
-- Amfiteatre de Tarraco (dungeon)
-- Balcó del Mediterrani (vista)
-- Catedral de Tarragona (guild)
+Panel web interactivo que transforma las calles, monumentos e historia del Baix Camp y Tarraco en un universo RPG de neón y misiones.
 
 ---
 
-## ⚙️ Stack
+## ⚡ Stack
 
-| Capa | Tecnología |
-|---|---|
-| Backend | Node.js 20 · Express · CORS |
-| Frontend | React 18 · Vite 5 · Nginx |
-| Contenedores | Docker · Docker Compose |
-| Estilos | CSS puro |
-| Persistencia | JSON en disco |
+- Frontend: React · Vite · Nginx · CSS cyberpunk propio
+- Backend: Node.js · Express · API REST con persistencia JSON
+- Infraestructura: Docker · Docker Compose
 
 ---
 
-## 🚀 Cómo levantarlo
+## 🗺️ Contenido
 
-Requisitos: Docker y Docker Compose.
+- 10 zonas reales con foto (Plaça de Prim, Campanar de Sant Pere, Casa Navàs, Gaudí Centre, Amfiteatre de Tarraco, etc.)
+- 9 misiones de desarrollador con barra de progreso
+- 10 objetos legendarios (Vermut, Avellana, Mulassa, Drac…)
+- 5 categorías culturales + 13 personajes históricos
+- Muro público con kudos y cooldown anti-spam
+- Modal holográfico 3D, CyberRain, audio FX y música lofi
 
-Ejecuta `docker compose up --build` en la raíz. Espera 1-3 minutos.
+---
+
+## 🚀 Arrancar en local
+
+Necesitas Docker y Docker Compose.
+
+Clona el repo:
+
+    git clone https://github.com/urukaisk-maker/reus-anime-project.git
+    cd reus-anime-project
+
+Levanta todo:
+
+    sudo docker compose up --build
+
+Abre:
 
 - Frontend: http://localhost:3000
-- Backend: http://localhost:5000/health
+- Backend API: http://localhost:5000/api/data
 
-Para parar: `docker compose down`.
+Parar:
 
----
+    sudo docker compose down
 
-## 🎮 Funcionalidades
+Ver logs en vivo:
 
-### Navegación
-
-- 5 pestañas: Zones · Missions · Inventory · Codex · Mur
-- 3 páginas internas: Portfolio · Aviso Legal · Privacidad
-
-### Zones
-
-- 10 zonas con foto real
-- Modal holográfico 3D al clicar
-- Badges de tipo (SPAWN / DUNGEON / GUILD / LAB / SHOP / VISTA)
-- Búsqueda + filtros por región
-
-### Missions
-
-- 9 misiones con barra de progreso
-- Búsqueda + filtros por dificultad
-
-### Inventory
-
-- 10 objetos con iconos emoji
-- Rareza por color (R / SR / SSR)
-- Búsqueda + filtros por rareza
-
-### Codex
-
-- 5 categorías culturales
-- 13 personajes históricos
-- Búsqueda en tiempo real
-
-### Mur
-
-- Validación + cooldown anti-spam de 20s por IP
-- Sistema de kudos con persistencia local
-- Sonido de éxito
-
-### Extras sensoriales
-
-- CyberRain: lluvia canvas de kanji + binario
-- Audio FX: clics con Web Audio API
-- Music toggle: radio lofi synthwave
-- Ticker narrativo con frases rotando
+    sudo docker compose logs -f
 
 ---
 
 ## 📁 Estructura
 
     reus-anime-project/
+    ├── backend/         Express + db.json + messages.json
+    ├── frontend/        React + Vite + Nginx
     ├── docker-compose.yml
-    ├── README.md
-    ├── backend/
-    │   ├── Dockerfile
-    │   ├── package.json
-    │   ├── server.js
-    │   └── data/
-    │       ├── db.json
-    │       └── messages.json
-    └── frontend/
-        ├── Dockerfile
-        ├── nginx.conf
-        ├── package.json
-        ├── vite.config.js
-        ├── index.html
-        ├── public/img/
-        └── src/
-            ├── App.jsx
-            ├── components/
-            ├── pages/
-            ├── utils/
-            └── styles/
+    └── README.md
 
 ---
 
@@ -133,34 +73,14 @@ Para parar: `docker compose down`.
 | GET | /api/locations/:id | Una zona |
 | GET | /api/categories | Categorías |
 | GET | /api/people | Personajes |
-| GET | /api/messages | Mensajes |
+| GET | /api/messages | Mensajes del muro |
 | POST | /api/messages | Enviar mensaje |
 | POST | /api/messages/:id/like | Dar kudo |
 
 ---
 
-## 🎨 Paleta
-
-| Color | Uso |
-|---|---|
-| #ff2ec4 neon-pink | Hero, SSR |
-| #9d4edd neon-purple | Bordes, SR |
-| #00f0ff neon-cyan | Enlaces, R |
-| #b8ff3a neon-lime | Recompensas |
-| #03000a bg-0 | Fondo base |
-
-Tipografías: Orbitron (display) + Rajdhani (texto).
-
----
-
-## 📜 Legal
-
-Proyecto personal sin ánimo de lucro. Las marcas y referencias culturales citadas pertenecen a sus respectivos titulares y se usan con finalidad divulgativa.
-
----
-
 ## 👤 Autor
 
-**Manuel Casimiro Carrasco** · [@urukaisk-maker](https://github.com/urukaisk-maker)
+Manuel Casimiro Carrasco · [@urukaisk-maker](https://github.com/urukaisk-maker)
 
-Creado bajo la sombra del Campanar de Sant Pere, alimentado a base de vermut y commits limpios.
+Hecho con cariño, código limpio y vermut desde Reus. 🐙
